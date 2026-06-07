@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mysql-volume-claim
+  namespace: three-tier
+
+spec:
+  accessModes:
+    - ReadWriteOnce
+
+  storageClassName: manual
+
+  resources:
+    requests:
+      storage: 5Gi

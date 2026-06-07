@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todo-frontend
+  namespace: three-tier
+  labels:
+    role: frontend
+    env: demo
+
+spec:
+  replicas: 2
+
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 25%
+
+  selector:
+    matchLabels:
+      role: frontend
+
+  template:
+    metadata:
+      labels:
+        role: frontend
+
+    spec:
+      # imagePullSecrets:
+      # - name: ecr-registry-secret
+
+      containers:
+      - name: todo-frontend
+        image: sanketmahajan/todoapp_frontend:4.0.1
+        imagePullPolicy: Always
+
+        ports:
+        - containerPort: 80

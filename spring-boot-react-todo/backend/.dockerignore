@@ -1,0 +1,35 @@
+# Git
+.git
+.gitignore
+
+# IDE
+.idea
+.vscode
+*.iml
+
+# Maven target directory
+target/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jenkins
+.jenkins
+
+# Docker
+Dockerfile.old
+
+# Documentation
+README.md
+
+# Node modules (if present)
+node_modules/
+
+# Temporary files
+tmp/
+temp/
+*.tmp

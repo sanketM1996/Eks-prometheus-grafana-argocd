@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: todo-mysql-svc
+  namespace: three-tier
+
+spec:
+  clusterIP: None
+
+  selector:
+    app: todo-mysql
+
+  ports:
+    - name: mysql
+      port: 3306
+      targetPort: 3306

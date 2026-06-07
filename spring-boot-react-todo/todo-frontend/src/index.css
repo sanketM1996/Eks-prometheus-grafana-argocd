@@ -1,0 +1,67 @@
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Dark theme base */
+  color: #e0e0e0;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #60a5fa;
+  text-decoration: none;
+  transition: 0.3s;
+}
+a:hover {
+  color: #3b82f6;
+}
+
+/* 🔥 IMPORTANT: remove flex from body */
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* Headings */
+h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+/* Buttons (modern look) */
+button {
+  border-radius: 10px;
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Optional: glass effect helper */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
