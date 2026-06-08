@@ -289,6 +289,8 @@ Path           : Kubernetes-Manifest/backend-ingress/
 change only this file
 ```
 ---
+### > 📄 See also: [Troubleshooting Guide](./TroubleShootingCmd.md)
+---
 
 # ⭐ PROJECT OWNER ⭐
 
