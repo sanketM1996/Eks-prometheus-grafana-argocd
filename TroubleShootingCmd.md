@@ -156,3 +156,33 @@ kubectl run debug --image=busybox --restart=Never -n three-tier --rm -it -- /bin
 # Check node resource usage
 kubectl top nodes
 ```
+---
+# Mysql
+### Step 1: Get the DB pod name
+kubectl get pods -n three-tier | grep -i db
+
+### Step 2: Exec into the pod
+kubectl exec -it <db-pod-name> -n three-tier -- /bin/bash
+
+### Step 3: Login to MySQL (inside the pod)
+mysql -u root -p
+
+### Step 4: MySQL commands (inside MySQL shell)
+SHOW DATABASES;
+USE <database-name>;
+SHOW TABLES;
+SELECT * FROM <table-name>;
+
+### Step 5: Exit MySQL and pod
+exit
+exit
+
+### -----------------------------------------------
+### If you don't know the MySQL root password
+### -----------------------------------------------
+
+### Check env variables inside the pod
+kubectl exec -it <db-pod-name> -n three-tier -- env | grep -i mysql
+
+### Or decode it from the Kubernetes secret
+kubectl get secret <secret-name> -n three-tier -o jsonpath="{.data.MYSQL_ROOT_PASSWORD}" | base64 --decode
