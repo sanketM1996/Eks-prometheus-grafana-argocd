@@ -290,22 +290,20 @@ change only this file
 ```
 ---
 
+4. Click **Create**.
 
-
-### Destroy the infra
+### Same for frontend and frontend-ingress
 ```bash
-to delete deployment 
-kubectl delete three-tier
-kubectl delete argocd
-kubectl delete monitoring
+Application Name : backend-ingress
+Path           : Kubernetes-Manifest/backend-ingress/
+change only this file
+```
+---
 
-to delete terraform infra
-delete kubernates infra first
-terraform destroy
-delete vpc infra 
-terraform destroy
-
-delete S3 bucket
+### Images Version for frontend
+```bash
+sanketmahajan/todoapp_frontend:4.0.1
+sanketmahajan/todoapp_frontend:6.0.0
 ```
 ---
 ### 📄 See also: [Troubleshooting Guide](./TroubleShootingCmd.md)
