@@ -306,6 +306,18 @@ sanketmahajan/todoapp_frontend:4.0.1
 sanketmahajan/todoapp_frontend:6.0.0
 ```
 ---
+### Once done delete the all resources
+
+```bash
+kubectl delete ns three-tier
+kubectl delete ns argocd
+kubectl delete ns monitoring
+delete terraform resources
+terraform destroy (vpc & eks)
+
+
+```
+---
 ### 📄 See also: [Troubleshooting Guide](./TroubleShootingCmd.md)
 ---
 
