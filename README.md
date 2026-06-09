@@ -24,7 +24,7 @@ helm version
 ---
 ### Step-1 (Clone the repo)
 ```bash
-git clone https://github.com/Shivani-1998-Devops/Eks-prometheus-grafana-argocd.git
+git clone https://github.com/sanketM1996/Eks-prometheus-grafana-argocd.git
 ```
 ---
 
